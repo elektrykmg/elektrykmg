@@ -476,3 +476,11 @@ height:42px;
 display:block;
 margin-bottom:18px;
 }
+.service-card{
+transition: all 0.25s ease;
+}
+
+.service-card:hover{
+transform: translateY(-6px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
