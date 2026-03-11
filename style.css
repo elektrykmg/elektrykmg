@@ -471,3 +471,8 @@ color:#fff;
 .btn-facebook:hover{
 background:#1664d9;
 }
+.footer-logo img{
+height:42px;
+display:block;
+margin-bottom:18px;
+}
