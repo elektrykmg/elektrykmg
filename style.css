@@ -455,3 +455,7 @@ a {
     width: 100%;
   }
 }
+.logo img{
+height:40px;
+display:block;
+}
