@@ -518,3 +518,9 @@ flex-wrap:wrap;
 .nav a.active{
   color: var(--yellow);
 }
+.page-title{
+text-align:center;
+margin-bottom:20px;
+font-size:clamp(2rem,4vw,3rem);
+color:var(--navy-dark);
+}
