@@ -15,6 +15,7 @@
   --white: #ffffff;
   --border: #e6e9ef;
   --shadow: 0 10px 30px rgba(15, 45, 82, 0.08);
+  --shadow-strong: 0 14px 34px rgba(15, 45, 82, 0.12);
   --radius: 18px;
 }
 
@@ -40,12 +41,12 @@ a {
 }
 
 .site-header {
-  background: rgba(10, 32, 58, 0.95);
+  background: rgba(10, 32, 58, 0.96);
   color: var(--white);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
 }
 
@@ -64,14 +65,15 @@ a {
   letter-spacing: 0.5px;
 }
 
-.logo span,
-.footer-logo span {
-  color: var(--yellow);
-}
-
 .logo img {
   height: 40px;
   display: block;
+}
+
+.footer-logo img {
+  height: 42px;
+  display: block;
+  margin-bottom: 18px;
 }
 
 .nav {
@@ -81,15 +83,12 @@ a {
 }
 
 .nav a {
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255,255,255,0.92);
   font-weight: 600;
-  transition: 0.2s ease;
+  transition: color 0.2s ease;
 }
 
-.nav a:hover {
-  color: var(--yellow);
-}
-
+.nav a:hover,
 .nav a.active {
   color: var(--yellow);
 }
@@ -110,11 +109,11 @@ a {
 
 .hero {
   position: relative;
-  min-height: 520px;
+  min-height: 560px;
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(10, 32, 58, 0.95) 0%, rgba(10, 32, 58, 0.88) 45%, rgba(10, 32, 58, 0.65) 100%),
+    linear-gradient(90deg, rgba(10, 32, 58, 0.95) 0%, rgba(10, 32, 58, 0.88) 45%, rgba(10, 32, 58, 0.66) 100%),
     url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
   color: var(--white);
 }
@@ -122,7 +121,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(15, 45, 82, 0.06), rgba(15, 45, 82, 0.18));
+  background: linear-gradient(to bottom, rgba(15,45,82,0.05), rgba(15,45,82,0.18));
 }
 
 .hero-content {
@@ -132,35 +131,25 @@ a {
 }
 
 .hero-text {
-  max-width: 720px;
-  padding: 90px 0;
-  padding-left: 40px;
-}
-
-.hero-top {
-  display: inline-block;
-  margin-bottom: 18px;
-  color: var(--yellow);
-  font-weight: 800;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  max-width: 760px;
+  padding: 96px 0;
 }
 
 .hero-logo {
-  height: 150px;
-  margin-bottom: 20px;
+  height: 120px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5vw, 4.3rem);
-  line-height: 1.05;
-  margin-bottom: 22px;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  margin-bottom: 20px;
 }
 
 .hero-description {
-  font-size: 1.15rem;
-  max-width: 680px;
-  color: rgba(255, 255, 255, 0.93);
+  font-size: 1.12rem;
+  max-width: 700px;
+  color: rgba(255,255,255,0.93);
   margin-bottom: 26px;
 }
 
@@ -172,8 +161,8 @@ a {
 }
 
 .hero-tags span {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
   color: var(--white);
   padding: 10px 14px;
   border-radius: 999px;
@@ -194,8 +183,13 @@ a {
   padding: 0 22px;
   border-radius: 12px;
   font-weight: 700;
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
   border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .btn-primary {
@@ -210,18 +204,16 @@ a {
 .btn-secondary {
   background: var(--white);
   color: var(--navy-dark);
-  border-color: var(--yellow);
+  border-color: var(--white);
 }
 
 .btn-secondary:hover {
-  background: var(--yellow);
-  color: #111;
-  border-color: var(--yellow-dark);
+  background: #f7f7f7;
 }
 
 .btn-whatsapp {
   background: #1f9d55;
-  color: #fff;
+  color: white;
 }
 
 .btn-whatsapp:hover {
@@ -266,7 +258,7 @@ a {
 
 .section-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .section-heading.left {
@@ -281,7 +273,8 @@ a {
   margin-bottom: 10px;
 }
 
-.section h2 {
+.section h2,
+.page-title {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   color: var(--navy-dark);
@@ -290,35 +283,51 @@ a {
 .page-title {
   text-align: center;
   margin-bottom: 20px;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--navy-dark);
+}
+
+.intro-text {
+  max-width: 760px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.services-grid,
+.features-grid,
+.trust-grid {
+  display: grid;
+  gap: 22px;
 }
 
 .services-grid,
 .features-grid {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+}
+
+.trust-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  border: 1px solid rgba(15,45,82,0.05);
 }
 
 .service-card,
-.feature-card {
+.feature-card,
+.trust-card {
   padding: 28px;
 }
 
 .service-card {
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-strong);
 }
 
 .card-icon {
@@ -327,7 +336,9 @@ a {
 }
 
 .service-card h3,
-.feature-card h3 {
+.feature-card h3,
+.trust-card h3,
+.about-home-box h3 {
   font-size: 1.3rem;
   line-height: 1.2;
   color: var(--navy-dark);
@@ -336,6 +347,7 @@ a {
 
 .service-card p,
 .feature-card p,
+.trust-card p,
 .about-home-text p,
 .site-footer p,
 .site-footer a,
@@ -343,9 +355,14 @@ a {
   color: var(--muted);
 }
 
+.trust-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
 .about-home {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
+  grid-template-columns: 1.25fr 0.95fr;
   gap: 30px;
   align-items: start;
 }
@@ -360,12 +377,7 @@ a {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 28px;
-}
-
-.about-home-box h3 {
-  margin-bottom: 18px;
-  color: var(--navy-dark);
-  font-size: 1.5rem;
+  border: 1px solid rgba(15,45,82,0.05);
 }
 
 .about-home-box ul {
@@ -390,20 +402,26 @@ a {
   text-align: center;
 }
 
+.cta-box {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 .cta-box h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .cta-box p {
   max-width: 620px;
-  margin: 0 auto 30px auto;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 30px;
+  color: rgba(255,255,255,0.9);
 }
 
 .cta-buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   flex-wrap: wrap;
 }
@@ -420,12 +438,6 @@ a {
   gap: 30px;
 }
 
-.footer-logo img {
-  height: 42px;
-  display: block;
-  margin-bottom: 18px;
-}
-
 .site-footer h4 {
   margin-bottom: 14px;
   font-size: 1.15rem;
@@ -433,7 +445,7 @@ a {
 
 .site-footer p,
 .site-footer a {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255,255,255,0.82);
   margin-bottom: 8px;
 }
 
@@ -445,14 +457,14 @@ a {
   text-align: center;
   padding: 15px 0;
   font-size: 14px;
-  opacity: 0.85;
-  background: var(--navy-dark);
-  color: rgba(255, 255, 255, 0.7);
+  background: #08182c;
+  color: rgba(255,255,255,0.72);
 }
 
 @media (max-width: 1080px) {
   .services-grid,
   .features-grid,
+  .trust-grid,
   .footer-wrap {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -484,7 +496,10 @@ a {
 
   .hero-text {
     padding: 70px 0;
-    padding-left: 0;
+  }
+
+  .hero-logo {
+    height: 96px;
   }
 
   .contact-strip-wrap {
@@ -499,6 +514,7 @@ a {
 
   .services-grid,
   .features-grid,
+  .trust-grid,
   .footer-wrap {
     grid-template-columns: 1fr;
   }
@@ -522,6 +538,7 @@ a {
 
   .service-card,
   .feature-card,
+  .trust-card,
   .about-home-box {
     padding: 22px;
   }
@@ -536,4 +553,50 @@ a {
   .cta-buttons .btn {
     width: 100%;
   }
+}
+/* ===== POPRAWKA HERO (wycentrowanie) ===== */
+
+.hero-content{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-text{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-tags{
+    justify-content:center;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+/* ===== POPRAWKA PRZYCISKU MAIL ===== */
+
+.btn-secondary{
+    background:#eef2f6;
+    color:#0f2742;
+    border:1px solid #d7dde5;
+}
+
+.btn-secondary:hover{
+    background:#f2c200;
+    color:#111;
+    border-color:#e0b000;
+}
+
+/* ===== MOBILE HERO ===== */
+
+@media (max-width: 860px){
+
+.hero-text{
+    padding:70px 20px;
+    text-align:center;
+}
+
 }
