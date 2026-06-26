@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elektrykmg.pl/sitemap.xml
