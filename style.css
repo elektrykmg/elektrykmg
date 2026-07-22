@@ -313,7 +313,8 @@ a {
 .services-grid,
 .features-grid,
 .trust-grid,
-.projects-grid {
+.projects-grid,
+.process-grid {
   display: grid;
   gap: 22px;
 }
@@ -326,6 +327,10 @@ a {
 .trust-grid,
 .projects-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .projects-grid.large {
@@ -342,7 +347,8 @@ a {
 .service-card,
 .feature-card,
 .trust-card,
-.project-card {
+.project-card,
+.process-card {
   padding: 28px;
 }
 
@@ -366,6 +372,7 @@ a {
 .feature-card h3,
 .trust-card h3,
 .project-card h3,
+.process-card h3,
 .about-home-box h3 {
   font-size: 1.3rem;
   line-height: 1.2;
@@ -387,6 +394,7 @@ a {
 .feature-card p,
 .trust-card p,
 .project-card p,
+.process-card p,
 .about-home-text p,
 .site-footer p,
 .site-footer a,
@@ -442,6 +450,87 @@ a {
 
 .small-note {
   margin-bottom: 18px;
+}
+
+.service-shortcuts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.service-shortcuts .btn {
+  min-height: 44px;
+}
+
+#elektryka,
+#zabezpieczenia,
+#wspolpraca,
+#faq {
+  scroll-margin-top: 100px;
+}
+
+.process-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: #111;
+  font-weight: 800;
+}
+
+.faq-wrap {
+  max-width: 920px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(15,45,82,0.08);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  color: var(--navy-dark);
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--yellow-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  padding: 0 22px 22px;
+  color: var(--muted);
 }
 
 .center-button {
@@ -524,6 +613,7 @@ a {
 
   .trust-grid,
   .projects-grid,
+  .process-grid,
   .projects-grid.large,
   .footer-wrap {
     grid-template-columns: repeat(2, 1fr);
@@ -576,6 +666,7 @@ a {
   .features-grid,
   .trust-grid,
   .projects-grid,
+  .process-grid,
   .projects-grid.large,
   .footer-wrap {
     grid-template-columns: 1fr;
