@@ -740,3 +740,130 @@ a {
 .project-card p {
   color: var(--muted);
 }
+
+/* Mobile header: compact logo + call button + native details navigation.
+   The desktop header and all existing page content remain unchanged. */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .site-header .header-wrap {
+    min-height: 64px;
+    padding: 8px 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 9px;
+  }
+
+  .site-header .logo {
+    display: flex;
+    min-width: 0;
+    flex: 0 1 auto;
+    align-items: center;
+  }
+
+  .site-header .logo img {
+    height: auto;
+    max-height: 36px;
+    max-width: min(130px, 33vw);
+    object-fit: contain;
+  }
+
+  .site-header .nav {
+    display: none;
+  }
+
+  .site-header .header-phone {
+    order: 2;
+    margin-left: auto;
+    width: auto;
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .phone-desktop-label {
+    display: none;
+  }
+
+  .phone-mobile-label {
+    display: inline;
+  }
+
+  .mobile-menu {
+    display: block;
+    order: 3;
+    position: relative;
+    flex: 0 0 auto;
+    color: var(--white);
+  }
+
+  .mobile-menu summary {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 11px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu[open] summary,
+  .mobile-menu summary:hover {
+    border-color: var(--yellow);
+  }
+
+  .mobile-menu .mobile-nav {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 9px);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    padding: 8px;
+    border-radius: 12px;
+    background: var(--navy-dark);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: var(--shadow-strong);
+  }
+
+  .mobile-menu .mobile-nav a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .mobile-menu .mobile-nav a:hover,
+  .mobile-menu .mobile-nav a:focus-visible,
+  .mobile-menu .mobile-nav a.active {
+    color: var(--yellow);
+    background: rgba(255,255,255,0.07);
+  }
+
+  .mobile-menu summary:focus-visible,
+  .site-header .header-phone:focus-visible,
+  .site-header .logo:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: 921px) {
+  .phone-mobile-label {
+    display: none;
+  }
+}
