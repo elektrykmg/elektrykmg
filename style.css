@@ -908,7 +908,7 @@ html{scroll-padding-top:100px}
 
 /* Korekty po przeglądzie właściciela */
 .site-header .logo{display:block;position:relative;overflow:hidden;width:158px;height:76px;flex-shrink:0}
-.site-header .logo img{position:absolute;width:306px;height:204px;max-width:none;left:-74px;top:-64px}
+.site-header .logo img{position:absolute;width:306px;height:204px;max-width:none;max-height:none;left:-74px;top:-64px}
 .header-wrap{min-height:98px}
 .home-rebuilt .cta-section{background:#e9eef4;color:var(--navy-dark)}
 .home-rebuilt .cta-box h2{color:var(--navy-dark)}
