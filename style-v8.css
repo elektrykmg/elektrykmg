@@ -1132,7 +1132,7 @@ html{scrollbar-gutter:stable}
 .services-page .cta-box .contact-kicker { color: #b28c00; }
 
 /* Reusable photo lightbox navigation */
-.photo-viewer { position: fixed; max-width: min(96vw, 1200px); max-height: 94dvh; }
+.photo-viewer { position: fixed; }
 .photo-viewer .photo-nav {
   position: fixed; top: 50%; transform: translateY(-50%);
   width: 48px; height: 56px; border: 1px solid rgba(255,255,255,.65);
