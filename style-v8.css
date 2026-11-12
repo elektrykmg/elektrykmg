@@ -913,7 +913,7 @@ html{scroll-padding-top:100px}
 .home-rebuilt .cta-section{background:#e9eef4;color:var(--navy-dark)}
 .home-rebuilt .cta-box h2{color:var(--navy-dark)}
 .home-rebuilt .cta-box p{color:var(--text)}
-.home-rebuilt .cta-box .contact-kicker{color:#775e00;text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
+.home-rebuilt .cta-box .contact-kicker{color:var(--yellow-dark);text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
 .home-rebuilt .contact-number{color:var(--navy-dark)}
 .home-rebuilt .footer-simple{grid-template-columns:1.35fr 1fr .7fr;gap:40px}
 .home-rebuilt .footer-simple h2{font-size:1rem;color:#fff;margin-bottom:14px}
@@ -990,7 +990,7 @@ html{scrollbar-gutter:stable}
 .services-page .services-cta{padding:64px 0;background:#e9eef4;color:var(--navy-dark)}
 .services-page .services-cta h2,.services-page .contact-number{color:var(--navy-dark)}
 .services-page .services-cta p{color:var(--text)}
-.services-page .services-cta .contact-kicker{color:#775e00;text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
+.services-page .services-cta .contact-kicker{color:var(--yellow-dark);text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
 .services-page .services-cta .btn-whatsapp{color:var(--navy-dark)}
 .services-page .services-cta .btn-whatsapp:hover{background:rgba(15,45,82,.07)}
 @media(max-width:760px){.service-group-heading,.service-details,.service-steps{grid-template-columns:1fr;gap:22px}.service-details{gap:0}.services-hero,.service-group,.services-process,.services-faq,.services-page .services-cta{padding:46px 0}.services-hero .hero-buttons .btn{flex:1}.service-jumps>.container{flex-direction:column;gap:8px}.service-group-heading{margin-bottom:24px}}
@@ -1005,7 +1005,7 @@ html{scrollbar-gutter:stable}
 .services-page .cta-box{max-width:900px}
 .services-page .cta-box h2{font-size:clamp(1.85rem,3.3vw,2.65rem);line-height:1.2;color:var(--navy-dark)}
 .services-page .cta-box p{color:var(--text)}
-.services-page .cta-box .contact-kicker{color:#775e00;text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
+.services-page .cta-box .contact-kicker{color:var(--yellow-dark);text-transform:uppercase;font-size:.82rem;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
 .services-page .cta-section .btn-whatsapp{color:var(--navy-dark)}
 .services-page .cta-section .btn-whatsapp:hover{background:rgba(15,45,82,.07);color:var(--navy-dark)}
 .faq-question{margin-top:0;padding-top:30px;border-top:0}
@@ -1129,7 +1129,7 @@ html{scrollbar-gutter:stable}
   margin-bottom: 14px;
 }
 .home-rebuilt .cta-box .contact-kicker,
-.services-page .cta-box .contact-kicker { color: #b28c00; }
+.services-page .cta-box .contact-kicker { color: var(--yellow-dark); }
 
 /* Reusable photo lightbox navigation */
 .photo-viewer { position: fixed; }
