@@ -1151,3 +1151,9 @@ html{scrollbar-gutter:stable}
 @media (max-width: 600px) {
   .photo-viewer .photo-nav { width: 38px; height: 48px; font-size: 32px; }
 }
+
+/* Use one brand yellow for all small section labels, including CTA */
+.home-rebuilt .section-label,
+.home-rebuilt .cta-box .contact-kicker,
+.services-page .section-label,
+.services-page .cta-box .contact-kicker { color: var(--yellow-dark); }
