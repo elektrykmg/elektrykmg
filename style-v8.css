@@ -1089,3 +1089,29 @@ html{scrollbar-gutter:stable}
 .legal-content li{margin-bottom:12px}
 .legal-content a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 @media(max-width:760px){.legal-content{padding-top:30px;padding-bottom:40px}}
+
+/* Mobile CTA alignment: equal-size buttons and no wrapped labels */
+@media (max-width: 640px) {
+  .home-rebuilt .hero-buttons,
+  .home-rebuilt .cta-buttons,
+  .services-page .hero-buttons,
+  .services-page .cta-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .home-rebuilt .hero-buttons .btn,
+  .home-rebuilt .cta-buttons .btn,
+  .services-page .hero-buttons .btn,
+  .services-page .cta-buttons .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 8px;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
