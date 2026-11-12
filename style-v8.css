@@ -1115,3 +1115,39 @@ html{scrollbar-gutter:stable}
     text-align: center;
   }
 }
+
+/* Shared small yellow section headings */
+.home-rebuilt .section-label,
+.home-rebuilt .contact-kicker,
+.services-page .section-label,
+.services-page .contact-kicker {
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.home-rebuilt .cta-box .contact-kicker,
+.services-page .cta-box .contact-kicker { color: #b28c00; }
+
+/* Reusable photo lightbox navigation */
+.photo-viewer { position: fixed; max-width: min(96vw, 1200px); max-height: 94dvh; }
+.photo-viewer .photo-nav {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 56px; border: 1px solid rgba(255,255,255,.65);
+  border-radius: 12px; background: rgba(8,20,35,.78); color: #fff;
+  font-size: 40px; line-height: 1; cursor: pointer; z-index: 3;
+}
+.photo-viewer .photo-prev { left: max(10px, env(safe-area-inset-left)); }
+.photo-viewer .photo-next { right: max(10px, env(safe-area-inset-right)); }
+.photo-viewer .photo-counter {
+  position: fixed; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%;
+  transform: translateX(-50%); background: rgba(8,20,35,.8); color: #fff;
+  padding: 5px 13px; border-radius: 30px; font-size: 14px; z-index: 3;
+}
+.photo-viewer .photo-nav[hidden] { display: none; }
+.photo-viewer .photo-nav:focus-visible { outline: 3px solid #f6c400; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .photo-viewer .photo-nav { width: 38px; height: 48px; font-size: 32px; }
+}
